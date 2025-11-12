@@ -1,25 +1,118 @@
-# Getting Started
+## 🚀 Tecnologias Utilizadas
 
-### Reference Documentation
-For further reference, please consider the following sections:
+### [Spring Boot](https://spring.io/projects/spring-boot)
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/3.5.7/maven-plugin)
-* [Create an OCI image](https://docs.spring.io/spring-boot/3.5.7/maven-plugin/build-image.html)
-* [Spring Boot DevTools](https://docs.spring.io/spring-boot/3.5.7/reference/using/devtools.html)
-* [Spring Web](https://docs.spring.io/spring-boot/3.5.7/reference/web/servlet.html)
+Framework Java que simplifica o desenvolvimento de aplicações Spring.
+Ele oferece inicialização rápida, configuração automática e servidor
+embutido (Tomcat).
 
-### Guides
-The following guides illustrate how to use some features concretely:
+### [PostgreSQL](https://www.postgresql.org/)
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
+Banco de dados relacional poderoso e open source, usado para persistir
+os dados dos clientes.
 
-### Maven Parent overrides
+### [JDBC (Java Database Connectivity)](https://docs.oracle.com/javase/tutorial/jdbc/)
 
-Due to Maven's design, elements are inherited from the parent POM to the project POM.
-While most of the inheritance is fine, it also inherits unwanted elements like `<license>` and `<developers>` from the parent.
-To prevent this, the project POM contains empty overrides for these elements.
-If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
+API padrão do Java para conexão e execução de comandos SQL em bancos de
+dados relacionais.
 
+### [Swagger (Springdoc OpenAPI)](https://springdoc.org/)
+
+Ferramenta de documentação interativa da API que permite testar os
+endpoints diretamente do navegador.
+
+------------------------------------------------------------------------
+
+## 🧱 Estrutura do Projeto
+
+    apiClientes/
+    │
+    ├── src/main/java/com/example/apiclientes/
+    │   ├── configuration/     # Configurações do projeto (Swagger, banco, etc.)
+    │   ├── controllers/       # Endpoints REST (camada de apresentação)
+    │   ├── dtos/              # Objetos de transferência de dados
+    │   ├── entities/          # Entidades que representam as tabelas do banco
+    │   ├── factories/         # Criação de conexão com o banco de dados
+    │   ├── repositories/      # Camada de acesso a dados (JDBC)
+    │
+    ├── src/main/resources/
+    │   ├── application.properties  # Configurações da aplicação
+    │
+    └── pom.xml
+
+------------------------------------------------------------------------
+
+## 👤 Entidade Cliente
+
+A entidade `Cliente` é composta pelos seguintes campos:
+
+  ------------------------------------------------------------------------
+  Campo                             Tipo               Descrição
+  --------------------------------- ------------------ -------------------
+  `id`                              UUID               Identificador único
+                                                       do cliente
+
+  `nome`                            String             Nome completo do
+                                                       cliente
+
+  `email`                           String             Endereço de e-mail
+
+  `telefone`                        String             Telefone de contato
+
+  `cpf`                             String             CPF do cliente
+
+  `dataNascimento`                  LocalDate          Data de nascimento
+
+  `dataCadastro`                    LocalDate          Data em que o
+                                                       cliente foi
+                                                       cadastrado
+  ------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+## 📘 Documentação da API (Swagger)
+
+Após iniciar o projeto, acesse o Swagger pelo navegador:
+
+    http://localhost:8081/swagger-ui/index.html
+
+------------------------------------------------------------------------
+
+## ▶️ Como Executar o Projeto
+
+1.  Clone o repositório:
+
+    ``` bash
+    git clone https://github.com/seuusuario/apiClientes.git
+    cd apiClientes
+    ```
+
+2.  Configure o banco PostgreSQL e ajuste o `application.properties`.
+
+3.  Execute o projeto:
+
+    ``` bash
+    mvn spring-boot:run
+    ```
+
+4.  Acesse a API:
+
+        http://localhost:8081/api/clientes
+
+------------------------------------------------------------------------
+
+## 📚 Recursos Úteis
+
+-   [Documentação Spring
+    Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/)
+-   [Documentação PostgreSQL](https://www.postgresql.org/docs/)
+-   [Guia JDBC - Oracle](https://docs.oracle.com/javase/tutorial/jdbc/)
+-   [Swagger UI](https://swagger.io/tools/swagger-ui/)
+
+------------------------------------------------------------------------
+
+## 🧑‍💻 Autor
+
+**Nildo santos**\
+Aluno e Desenvolvedor Full Stack\
+[Coti Informática](https://www.cotiinformatica.com.br)
