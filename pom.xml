@@ -8,17 +8,11 @@
 		<version>3.5.7</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.nildosantos</groupId>
-<<<<<<< HEAD
-	<artifactId>clientesApi</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>clientesApi</name>
-=======
+	<groupId>br.com.cotiinformatica</groupId>
 	<artifactId>apiClientes</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>apiClientes</name>
->>>>>>> ff4c4f3 (Primeiro commit)
-	<description>project for Spring Boot</description>
+	<description>API para controle de clientes</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -35,7 +29,9 @@
 	<properties>
 		<java.version>21</java.version>
 	</properties>
+	
 	<dependencies>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -47,25 +43,26 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-<<<<<<< HEAD
-=======
+		
 		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
 		<dependency>
-		    <groupId>org.postgresql</groupId>
-		    <artifactId>postgresql</artifactId>
+    		<groupId>org.postgresql</groupId>
+    		<artifactId>postgresql</artifactId>
 		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui -->
-<dependency>
-    <groupId>org.springdoc</groupId>
-    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-    <version>2.8.13</version>
-</dependency>
->>>>>>> ff4c4f3 (Primeiro commit)
+		<dependency>
+		    <groupId>org.springdoc</groupId>
+		    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+		    <version>2.8.13</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
